@@ -30,3 +30,4 @@ D:\C#-kodowanie\supermarket-kopia\supermarket\obj\Debug\net6.0-windows\refint\su
 D:\C#-kodowanie\supermarket-kopia\supermarket\obj\Debug\net6.0-windows\supermarket.pdb
 D:\C#-kodowanie\supermarket-kopia\supermarket\obj\Debug\net6.0-windows\supermarket.genruntimeconfig.cache
 D:\C#-kodowanie\supermarket-kopia\supermarket\obj\Debug\net6.0-windows\ref\supermarket.dll
+D:\C#-kodowanie\supermarket-kopia\supermarket\obj\Debug\net6.0-windows\supermarket.cash_register.resources
