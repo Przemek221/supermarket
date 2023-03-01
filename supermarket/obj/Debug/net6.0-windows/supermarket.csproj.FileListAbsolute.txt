@@ -19,7 +19,6 @@ D:\C#-kodowanie\supermarket-kopia\supermarket\bin\Debug\net6.0-windows\supermark
 D:\C#-kodowanie\supermarket-kopia\supermarket\bin\Debug\net6.0-windows\supermarket.dll
 D:\C#-kodowanie\supermarket-kopia\supermarket\bin\Debug\net6.0-windows\supermarket.pdb
 D:\C#-kodowanie\supermarket-kopia\supermarket\obj\Debug\net6.0-windows\supermarket.csproj.AssemblyReference.cache
-D:\C#-kodowanie\supermarket-kopia\supermarket\obj\Debug\net6.0-windows\supermarket.Form1.resources
 D:\C#-kodowanie\supermarket-kopia\supermarket\obj\Debug\net6.0-windows\supermarket.csproj.GenerateResource.cache
 D:\C#-kodowanie\supermarket-kopia\supermarket\obj\Debug\net6.0-windows\supermarket.GeneratedMSBuildEditorConfig.editorconfig
 D:\C#-kodowanie\supermarket-kopia\supermarket\obj\Debug\net6.0-windows\supermarket.AssemblyInfoInputs.cache
@@ -31,3 +30,4 @@ D:\C#-kodowanie\supermarket-kopia\supermarket\obj\Debug\net6.0-windows\supermark
 D:\C#-kodowanie\supermarket-kopia\supermarket\obj\Debug\net6.0-windows\supermarket.genruntimeconfig.cache
 D:\C#-kodowanie\supermarket-kopia\supermarket\obj\Debug\net6.0-windows\ref\supermarket.dll
 D:\C#-kodowanie\supermarket-kopia\supermarket\obj\Debug\net6.0-windows\supermarket.cash_register.resources
+D:\C#-kodowanie\supermarket-kopia\supermarket\obj\Debug\net6.0-windows\supermarket.form.resources

@@ -1,8 +1,8 @@
-﻿using System.Windows.Forms;
+﻿namespace supermarket;
 
-namespace supermarket;
+using System.Windows.Forms;
 
-partial class Form1
+partial class form
 {
     /// <summary>
     ///  Required designer variable.
@@ -45,7 +45,7 @@ partial class Form1
             this.CashRegister = new System.Windows.Forms.GroupBox();
             this.NumberOfCustomersInTheQueue = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.CustomersLeft = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -62,7 +62,7 @@ partial class Form1
             // 
             this.start.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.start.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.start.Location = new System.Drawing.Point(3, 289);
+            this.start.Location = new System.Drawing.Point(3, 313);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(132, 64);
             this.start.TabIndex = 0;
@@ -74,7 +74,7 @@ partial class Form1
             // 
             this.stop.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.stop.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.stop.Location = new System.Drawing.Point(3, 359);
+            this.stop.Location = new System.Drawing.Point(3, 383);
             this.stop.Name = "stop";
             this.stop.Size = new System.Drawing.Size(132, 64);
             this.stop.TabIndex = 1;
@@ -92,7 +92,6 @@ partial class Form1
             this.NumberOfCashRegisters.Size = new System.Drawing.Size(120, 50);
             this.NumberOfCashRegisters.TabIndex = 2;
             this.NumberOfCashRegisters.Text = "Number of cash registers";
-            this.NumberOfCashRegisters.Click += new System.EventHandler(this.label1_Click);
             // 
             // progressBar1
             // 
@@ -105,7 +104,6 @@ partial class Form1
             this.progressBar1.Size = new System.Drawing.Size(188, 22);
             this.progressBar1.TabIndex = 3;
             this.progressBar1.Value = 1;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // numericUpDown1
             // 
@@ -124,23 +122,22 @@ partial class Form1
             this.menu.Controls.Add(this.stop, 0, 3);
             this.menu.Controls.Add(this.start, 0, 2);
             this.menu.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.menu.Location = new System.Drawing.Point(12, 12);
+            this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.RowCount = 4;
             this.menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.menu.Size = new System.Drawing.Size(138, 426);
+            this.menu.Size = new System.Drawing.Size(138, 450);
             this.menu.TabIndex = 7;
-            this.menu.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.groupBox2.Controls.Add(this.N);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(3, 146);
+            this.groupBox2.Location = new System.Drawing.Point(3, 158);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(132, 98);
             this.groupBox2.TabIndex = 9;
@@ -149,6 +146,11 @@ partial class Form1
             // N
             // 
             this.N.Location = new System.Drawing.Point(6, 63);
+            this.N.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
             this.N.Name = "N";
             this.N.Size = new System.Drawing.Size(91, 23);
             this.N.TabIndex = 8;
@@ -183,11 +185,21 @@ partial class Form1
             // M
             // 
             this.M.Location = new System.Drawing.Point(6, 63);
+            this.M.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.M.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.M.Name = "M";
             this.M.Size = new System.Drawing.Size(91, 23);
             this.M.TabIndex = 8;
             this.M.Value = new decimal(new int[] {
-            5,
+            4,
             0,
             0,
             0});
@@ -198,14 +210,13 @@ partial class Form1
             this.CashRegister.Controls.Add(this.NumberOfCustomersInTheQueue);
             this.CashRegister.Controls.Add(this.label2);
             this.CashRegister.Controls.Add(this.progressBar1);
-            this.CashRegister.Location = new System.Drawing.Point(211, 12);
+            this.CashRegister.Location = new System.Drawing.Point(188, 12);
             this.CashRegister.Name = "CashRegister";
             this.CashRegister.Size = new System.Drawing.Size(200, 70);
             this.CashRegister.TabIndex = 8;
             this.CashRegister.TabStop = false;
             this.CashRegister.Text = "CashRegister";
             this.CashRegister.Visible = false;
-            this.CashRegister.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // NumberOfCustomersInTheQueue
             // 
@@ -214,7 +225,6 @@ partial class Form1
             this.NumberOfCustomersInTheQueue.Size = new System.Drawing.Size(33, 15);
             this.NumberOfCustomersInTheQueue.TabIndex = 5;
             this.NumberOfCustomersInTheQueue.Text = "x";
-            this.NumberOfCustomersInTheQueue.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -224,26 +234,25 @@ partial class Form1
             this.label2.Size = new System.Drawing.Size(131, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "customers in the queue";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
-            // label4
+            // CustomersLeft
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(6, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 25);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "X";
+            this.CustomersLeft.AutoSize = true;
+            this.CustomersLeft.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CustomersLeft.ForeColor = System.Drawing.SystemColors.Window;
+            this.CustomersLeft.Location = new System.Drawing.Point(6, 10);
+            this.CustomersLeft.Name = "CustomersLeft";
+            this.CustomersLeft.Size = new System.Drawing.Size(23, 25);
+            this.CustomersLeft.TabIndex = 10;
+            this.CustomersLeft.Text = "X";
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(473, 25);
+            this.groupBox3.Controls.Add(this.CustomersLeft);
+            this.groupBox3.Location = new System.Drawing.Point(445, 25);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(309, 39);
+            this.groupBox3.Size = new System.Drawing.Size(326, 39);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             // 
@@ -252,25 +261,25 @@ partial class Form1
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(56, 11);
+            this.label3.Location = new System.Drawing.Point(60, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(233, 25);
             this.label3.TabIndex = 11;
             this.label3.Text = "Customers left in the store";
-            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
-            // Form1
+            // form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.CashRegister);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.numericUpDown1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "form";
+            this.Text = "Supermarket";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.menu.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -301,34 +310,7 @@ partial class Form1
     private GroupBox CashRegister;
     private Label label2;
     private Label NumberOfCustomersInTheQueue;
-    private Label label4;
+    private Label CustomersLeft;
     private GroupBox groupBox3;
     private Label label3;
 }
-
-/*
-class cash_register
-{
-            this.start = new System.Windows.Forms.Button();
-            this.CashRegister = new System.Windows.Forms.GroupBox();
-            this.CashRegister.SuspendLayout();
-    
-
-            this.CashRegister.BackColor = System.Drawing.SystemColors.Info;
-            this.CashRegister.Controls.Add(this.NumberOfCustomersInTheQueue);
-            this.CashRegister.Controls.Add(this.label2);
-            this.CashRegister.Controls.Add(this.progressBar1);
-            this.CashRegister.Location = new System.Drawing.Point(211, 12);
-            this.CashRegister.Name = "CashRegister";
-            this.CashRegister.Size = new System.Drawing.Size(200, 70);
-            this.CashRegister.TabIndex = 8;
-            this.CashRegister.TabStop = false;
-            this.CashRegister.Text = "CashRegister";
-            this.CashRegister.Enter += new System.EventHandler(this.groupBox3_Enter);
-
-
-    private ProgressBar progressBar1;
-    private GroupBox CashRegister;
-    private Label NumberOfCustomersInTheQueue;
-    private Label label2;
-}*/
